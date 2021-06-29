@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<!--
+This is the Web-app Maven POM.
+
+
+Template version: __TEMPLATE_VERSION__
+Generation time : __GENERATION_TIME__
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>__REPLACE_GROUPID__</groupId>
+        <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <groupId>__REPLACE_GROUPID__</groupId>
+    <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-module-portlet</artifactId>
+    <packaging>war</packaging>
+    <name>${project.artifactId}</name>
+
+    <build>
+        <finalName>__REPLACE_SYSTEM_NAME__-portlet</finalName>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>javax.portlet</groupId>
+            <artifactId>portlet-api</artifactId>
+            <version>${portlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.liferay.portal</groupId>
+            <artifactId>portal-service</artifactId>
+            <version>${liferay.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- To get tag assistance in your IDE -->
+        <dependency>
+            <groupId>com.liferay.portal</groupId>
+            <artifactId>util-taglib</artifactId>
+            <version>${liferay.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>taglibs</groupId>
+            <artifactId>standard</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.0.1</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-api</artifactId>
+            <version>${jsf.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.sun.faces</groupId>
+            <artifactId>jsf-impl</artifactId>
+            <version>${jsf.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.liferay.faces</groupId>
+            <artifactId>liferay-faces-alloy</artifactId>
+            <version>${liferay.faces.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.liferay.faces</groupId>
+            <artifactId>liferay-faces-bridge-impl</artifactId>
+            <version>${liferay.faces.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.liferay.faces</groupId>
+            <artifactId>liferay-faces-portal</artifactId>
+            <version>${liferay.faces.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.el</groupId>
+            <artifactId>el-api</artifactId>
+            <version>2.2</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<pluginMetadata>
+  <mojos>
+    <mojo>
+      <goal>bc</goal>
+      <call>public_create_business_component_structure</call>
+    </mojo>
+
+    <mojo>
+      <goal>git</goal>
+      <call>public_create_git_structure</call>
+    </mojo>
+  </mojos>
+</pluginMetadata>

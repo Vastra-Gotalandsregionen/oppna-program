@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!--
+This is the Web-app Maven POM.
+
+
+Template version: __TEMPLATE_VERSION__
+Generation time : __GENERATION_TIME__
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>__REPLACE_GROUPID__</groupId>
+        <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <groupId>__REPLACE_GROUPID__</groupId>
+    <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-module-web</artifactId>
+    <packaging>war</packaging>
+    <name>${project.artifactId}</name>
+
+    <build>
+        <finalName>__REPLACE_SYSTEM_NAME__</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.tomcat.maven</groupId>
+                <artifactId>tomcat7-maven-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <systemProperties>
+                        <org.apache.commons.logging.LogFactory>org.apache.commons.logging.impl.LogFactoryImpl
+                        </org.apache.commons.logging.LogFactory>
+                    </systemProperties>
+                    <path>/</path>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-composite-svc</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+        </dependency>
+
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>__REPLACE_SYSTEM_NAME__-__REPLACE_BC_NAME__-composite-webcomp</artifactId>
+            <version>${project.version}</version>
+            <type>jar</type>
+        </dependency>
+
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+    </dependencies>
+</project>
